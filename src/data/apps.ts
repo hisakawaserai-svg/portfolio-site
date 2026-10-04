@@ -240,7 +240,7 @@ export const apps: AppType[] = [
     release: 'unrelease',
     coder: 'me',
     githubUrl: 'https://github.com/hisakawaserai-svg/portfolio-site',
-    description: '自分のアプリや就活の活動を紹介するポートフォリオサイトです。',
+    description: '自分のプログラミングと開発の歴史、作ったアプリを紹介するポートフォリオサイトです。（このページ）',
     reason: 'ポートフォリオが必要だったのと、React Native は使ったことがあったが、React は未経験だったため。',
     techs: [
       { name: 'React', usage: ['サイト全体の画面を、コンポーネントと state で作成'] },
@@ -252,11 +252,12 @@ export const apps: AppType[] = [
     color: '#7A4E9E',
     textColor: '#7A4E9E',
     gradient: 'linear-gradient(135deg, #7A4E9E, #c8a1e9)',
-    band: 'progress',
+    band: 'arrows',
     points: [
       '年表のデータは appId だけを持たせ、アプリの情報は getApp で一覧のデータから引く形にした（同じ情報を二重に持たない方針はAIの提案で、実装は自分）',
       'アプリ一覧を、公開中・デモ・未公開の3グループに分けて表示する。配列を分ける reduce は調べて、自分で実装した',
-      '吹き出しで案内を表示し、セリフのページ数を出す',
+      'スマホ画面をまねた目次の中の鳥を押すと、隣にセリフが表示され、押すたびに次のセリフに進む（ページ数つき）。他のアプリでも使ってきたキャラクターを入れた、自己紹介の遊び心ある演出を実装した',
+      'セリフをランダムにするため、配列を偏りなく並べ替える shuffle を実装し、useState の初期化関数で最初の1回だけ実行するようにした（書き方はAIに教わり、自分で実装）',
     ],
     roles: [
       {role: 'me', text: ['サイト全体のコーディングを自分で行った。props の型（children、state の更新関数など）は自分で調べて定義した']},
@@ -290,6 +291,6 @@ export const apps: AppType[] = [
     dateInfo: [{ dateType: 'create', date: '2025-09' }],
     color: '#C23B30',
     textColor: '#C23B30',
-    band: 'progress'
+    band: 'bars'
   }
 ];
