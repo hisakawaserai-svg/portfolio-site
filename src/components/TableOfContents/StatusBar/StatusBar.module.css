@@ -1,0 +1,11 @@
+.container {
+  padding: 0px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container p {
+  font-family: var(--font-m);
+  margin: 4px 0;
+}

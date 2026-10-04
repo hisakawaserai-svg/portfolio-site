@@ -1,0 +1,57 @@
+/* Phase */
+.phaseContainer {
+  display: grid;
+  grid-template-columns: 84px 20px minmax(0px, 1fr);
+  column-gap: 16px;
+  padding-top: 4px;
+}
+.emptyArea {
+  display: block;
+}
+
+.centerBarContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.centerBar {
+  position: absolute;
+  top: 14px;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--line);
+}
+.rhombus {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  margin-top: 9px;
+  background: var(--ink);
+  transform: rotate(45deg);
+}
+
+.labelContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 2px 0 4px;
+  flex-wrap: wrap;
+}
+.phase {
+  font-family: var(--font-m);
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.title {
+  font-family: var(--font-h);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* main */
+.container {
+  margin: 16px 0;
+}

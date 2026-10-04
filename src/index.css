@@ -1,0 +1,30 @@
+:root{
+  --page-bg:oklch(0.97 0.003 240);
+  --panel:oklch(0.995 0.002 240);
+  --ink:oklch(0.22 0.006 240);
+  --ink-soft:oklch(0.48 0.006 240);
+  --line:oklch(0.78 0.006 240);
+  --teal:oklch(0.5 0.09 195);
+  --navy:oklch(0.38 0.06 262);
+  --gray:oklch(0.48 0.006 240);
+  --blue:#7B85E0;
+  --thin: oklch(0.9 0.004 240);
+  --font-b:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+  --font-h:Georgia, "Noto Serif JP", serif;
+  --font-m:ui-monospace,"SF Mono",Menlo,monospace;
+
+  --rightGray: rgb(50, 75, 109);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font-b);
+}
+
+dd {
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+.releaseContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0;
+}
+.releaseLabel {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.releaseCount {
+  font-family: var(--font-m);
+  font-size: 12px;
+  color: var(--gray);
+}
+.releaseBar {
+  flex: 1 1 0%;
+  height: 1px;
+  background: oklch(0.85 0.005 240);
+}
+.releasePlatform {
+  font-size: 12px;
+  color: var(--gray);
+}

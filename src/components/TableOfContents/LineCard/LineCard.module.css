@@ -1,0 +1,13 @@
+.line {
+  padding: 0 4px;
+  white-space: pre-wrap;
+}
+.pageNumber {
+  text-align: right;
+  margin: 4px;
+  font-size: small;
+
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}

@@ -1,0 +1,250 @@
+.container {
+  margin: 16px 0;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  gap: 22px;
+}
+.headContainer {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.icon {
+  flex-shrink: 0;
+  width: clamp(60px, 20vw, 120px);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0px;
+  flex: 1;
+}
+.appTitleBar {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.index {
+  font-size: 12px;
+}
+.appTitle {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  margin: 0;
+}
+.platforms {
+  font-size: 11px;
+  color: var(--gray);
+  border: 1px solid oklch(0.85 0.005 240);
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.releaseContainer {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 3px 10px 3px 8px;
+  white-space: nowrap;
+  align-self: center;
+}
+.releaseMark {
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+}
+.desc {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.dl {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--thin);
+}
+.dtDiv {
+  display: grid;
+  grid-template-columns: 100px minmax(0px, 1fr);
+  gap: 6px 24px;
+  padding: 14px 0px;
+  border-bottom: 1px solid var(--thin);
+}
+.dt {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--gray);
+  padding-top: 2px;
+}
+.dd {
+  font-size: 14px;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+.ddDiv {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.ddIndex {
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.ddP{
+  font-size: 14px;
+  line-height: 1.8;
+  text-wrap: pretty;
+  margin: 4px;
+}
+.ddTechs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+.ddTech {
+  font-size: 12px;
+  padding: 3px 9px;
+  background: var(--page-bg);
+  border: 1px solid var(--thin);
+  border-radius: 4px;
+}
+.ddDivTech {
+  display: grid;
+  grid-template-columns: 100px minmax(0px, 1fr);
+  grid-column: 1 / -1;
+  scroll-margin-bottom: 50px;
+  gap: 6px 24px;
+  align-items: baseline;
+}
+.touchable {
+  flex-shrink: 0;
+}
+.margin {
+  margin: 8px 0;
+}
+
+.ddGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.roleCard {
+  border-radius: 4px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.role {
+  font-size: 12px;
+  font-weight: 700;
+}
+.roleText {
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 4px;
+  text-wrap: pretty;
+}
+
+.urlContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: -20px;
+}
+.urlA {
+  display: block;
+  line-height: 0;
+}
+.urlImg {
+  height: 40px;
+  display: block;
+}
+.ghUrl {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--panel);
+}
+
+.metaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 4px;
+}
+.coderContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 11px 5px 9px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  background: var(--page-bg);
+}
+.coderP {
+  font-size: 12.5px;
+  font-weight: 700;
+  margin: 0;
+}
+.dateContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-family: var(--font-m);
+  color: var(--gray);
+}
+.dateContainer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dtDiv {
+      grid-template-columns: 1fr;
+  }
+  .ddDivTech {
+    grid-template-columns: 1fr;
+  }
+  dd {
+    margin-left: 8px;
+  }
+}

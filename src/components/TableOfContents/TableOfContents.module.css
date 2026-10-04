@@ -1,0 +1,80 @@
+.container {
+  border: 14px solid #2B2F33;
+  border-radius: 44px;
+  margin-top: 16px;
+
+  position: sticky;
+  top: max(calc(50vh - 360px), 16px);
+  align-items: flex-start;
+  width: 360px;
+  height: calc(100vh - 16px - 16px);
+  max-height: 720px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.innerContainer {
+  background-color: #CFE6EA;
+  border-radius: 28px;
+  height: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.nameContainer {
+  box-sizing: border-box;
+  padding: 8px 12px;
+}
+.nameSection {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+} 
+
+.nameSection h1 {
+  margin: 0;
+  font-family: var(--font-h);
+}
+.nameSection p {
+  padding-left: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.catchContainer {
+  margin: 0;
+}
+.wish {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  white-space: pre-wrap;
+}
+.catch {
+  font-family: var(--font-h);
+  font-size: 15.5px;
+  margin: 2px 0 0 0;
+}
+.highlight {
+  background: linear-gradient(transparent 60%, yellow 60%);
+  font-size: large;
+}
+
+.talkingBirdCard {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 150px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .container{
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 10px;
+  }
+}
