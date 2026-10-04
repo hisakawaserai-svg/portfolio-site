@@ -265,5 +265,31 @@ export const apps: AppType[] = [
     dateInfo: [
       {dateType: 'create', date: '2026-09'}
     ]
+  },
+  {
+    id: 'profit-calculator',
+    title: '純利益計算機',
+    platforms: [{ platform: 'iOS' }],
+    image: '/profit-calc.png',
+    release: 'unrelease',
+    coder: 'ai',
+    githubUrl: 'https://github.com/hisakawaserai-svg/Profit-Calculator-App',
+    description: '売値・原価・送料・手数料から純利益を計算し、販売記録と月ごとのグラフで管理できるiOSアプリです。',
+    reason: '母のフリマ販売の純利益を計算できるようにするため作った。',
+    techs: [
+      { name: 'Swift', usage: ['iOSアプリ本体'] },
+      { name: 'CoreData', usage: ['販売記録を端末内に保存'] },
+    ],
+    points: [
+      '目標の利益から売値を出す「逆算」の機能を、自分で発案して入れた',
+    ],
+    roles: [
+      { role: 'me', text: ['機能の発案（逆算など）と、画面・計算の設計', 'Swiftの書き方をAIに聞きながら、一部のコードを自分で書いた'] },
+      { role: 'ai', text: ['Swiftの文法や書き方の回答', 'コードの一部の作成'] },
+    ],
+    dateInfo: [{ dateType: 'create', date: '2025-09' }],
+    color: '#C23B30',
+    textColor: '#C23B30',
+    band: 'progress'
   }
 ];
