@@ -9,6 +9,8 @@ const steps: number[] = [5, 10, 15, 20, 25, 30];
 
 const eqHeights = [8,16,12,22,14,18,8,24,16,12,20,14,6,18,22,14,16,26,18,12,20,14,8,22,16,24,14,18,12,20,8,16,22,14,12,18,8,16,20,12,14,8];
 
+const bars: number[] = [12, 18, 24, 30]
+
 const bandMap = {
   check: <div className={styles.check} />,
   steps: (
@@ -36,11 +38,11 @@ const bandMap = {
     <div className={styles.eqBand}>
       <svg width="100%" height="30" aria-hidden="true">
         <defs>
-          <pattern id="quizFilled" width="22" height="30" patternUnits="userSpaceOnUse">
-            <rect x="3" y="11" width="17" height="8" rx="2" fill="#5A6A1F" />
+          <pattern className={styles.patternSvg} id="quizFilled" width="22" height="30" patternUnits="userSpaceOnUse">
+            <rect x="3" y="11" width="17" height="8" rx="2" fill="currentColor" />
           </pattern>
-          <pattern id="quizOutline" width="22" height="30" patternUnits="userSpaceOnUse">
-            <rect x="3.75" y="11.75" width="15.5" height="6.5" rx="2" fill="none" stroke="#5A6A1F" strokeWidth="1.5" />
+          <pattern className={styles.patternSvg} id="quizOutline" width="22" height="30" patternUnits="userSpaceOnUse">
+            <rect x="3.75" y="11.75" width="15.5" height="6.5" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
           </pattern>
         </defs>
         <rect width="100%" height="30" fill="url(#quizOutline)" />
@@ -53,14 +55,36 @@ const bandMap = {
     <div className={styles.eqBand}>
       <svg width="100%" height="30" aria-hidden="true">
         <defs>
-          <pattern id="cookBookmark" width="96" height="30" patternUnits="userSpaceOnUse">
-            <path d="M10 0 V22 L17 17 L24 22 V0" fill="none" stroke="#CA6443" strokeWidth="1.5" strokeLinejoin="round" />
-            <path d="M42 0 V26 L49 21 L56 26 V0 Z" fill="#CA6443" />
-            <path d="M74 0 V22 L81 17 L88 22 V0" fill="none" stroke="#CA6443" strokeWidth="1.5" strokeLinejoin="round" />
+          <pattern className={styles.patternSvg} id="cookBookmark" width="96" height="30" patternUnits="userSpaceOnUse">
+            <path d="M10 0 V22 L17 17 L24 22 V0" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+            <path d="M42 0 V26 L49 21 L56 26 V0 Z" fill="currentColor" />
+            <path d="M74 0 V22 L81 17 L88 22 V0" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
           </pattern>
         </defs>
         <rect width="100%" height="30" fill="url(#cookBookmark)" />
       </svg>
+    </div>
+  ),
+  arrows: (
+    <div className={styles.eqBand}>
+      <svg width="100%" height="30" aria-hidden="true">
+        <defs>
+          <pattern className={styles.patternSvg} id="portfolioArrows" width="36" height="30" patternUnits="userSpaceOnUse">
+            <path d="M10 7 L19 15 L10 23" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            <path d="M20 7 L29 15 L20 23" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" opacity="0.4" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="30" fill="url(#portfolioArrows)" />
+      </svg>
+    </div>
+  ),
+  bars: (
+    <div className={styles.bars}>
+      {bars.map(bar => {
+        return(
+          <div className={styles.bar} key={bar} style={{height: bar}} />
+        )
+      })}
     </div>
   ),
 }

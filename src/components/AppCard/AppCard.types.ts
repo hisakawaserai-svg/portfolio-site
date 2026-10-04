@@ -1,4 +1,4 @@
-export type BandType = 'check' | 'steps' | 'eq' | 'progress' | 'bookmark';
+export type BandType = 'check' | 'steps' | 'eq' | 'progress' | 'bookmark' | 'arrows' | 'bars';
 
 type Platform = {
   platform: 'iOS' | 'Android' | 'Web', 

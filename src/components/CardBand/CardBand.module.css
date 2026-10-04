@@ -48,3 +48,23 @@
   display:block;
   color: var(--accent);
 }
+
+.patternSvg {
+  color: var(--accent);
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  height: 30px;
+  gap: 6px;
+  background-color: var(--page-bg);
+}
+.bar {
+  flex: 1;
+  background-color: var(--accent);
+  border-radius: 2px 2px 0 0;
+  background-image: linear-gradient(var(--page-bg) 0 1px, transparent 1px 5px);
+  background-size: 100% 5px;
+  background-position: left bottom;
+}
