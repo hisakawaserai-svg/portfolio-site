@@ -28,12 +28,14 @@ export const apps: AppType[] = [
     techs: [
       { name: 'React Native', usage: ['iOS・Android両方のアプリ本体'] },
       { name: 'TypeScript', usage: ['アプリ全体の型定義'] },
+      { name: 'react-native-bg-removal', usage: ['端末内で被写体を検出して背景を除去'] },
       { name: 'Skia', usage: ['画像の描画', '背景の透過と切り抜きの処理'] },
       { name: 'Reanimated', usage: [
-        'チュートリアル・スプラッシュのアニメーション',
+        'チュートリアル・スプラッシュ・編集画面のアニメーション',
         '範囲を調整するときのジェスチャ',
         '端末のアニメーション設定がオフでも動くよう ReduceMotion.Never を指定',
       ] },
+      { name: 'image-picker / camera-roll / share', usage: ['写真の選択・保存・共有'] },
       { name: 'AdMob', usage: ['広告の表示と収益化'] },
       { name: 'Jest', usage: ['実装のたびに、Claude Codeがテストを実行して動作を確認'] },
     ],
@@ -110,7 +112,7 @@ export const apps: AppType[] = [
     coder: 'ai',
     githubUrl: 'https://github.com/hisakawaserai-svg/Profit-Calculator-App-RN',
     dateInfo: [
-      { dateType: 'create', date: '2026-08' }, // 要確認：移植を始めた月
+      { dateType: 'create', date: '2026-08' },
       { dateType: 'release', date: '2026-08' },
     ],
   },
@@ -158,19 +160,19 @@ export const apps: AppType[] = [
     ],
     release: 'release',
     coder: 'ai',
-    githubUrl: 'https://github.com/hisakawaserai-svg/reporoku.git',
+    githubUrl: 'https://github.com/hisakawaserai-svg/reporoku',
     dateInfo: [
       { dateType: 'release', date: '2026-09' },
     ],
   },
   {
     id: "cooking-app",
-    image: '/cookingapp.png', // 要確認：アイコン画像
+    image: '/cookingapp.png',
     title: 'CookingApp',
     description: 'ネットで調べたレシピや、AIとの対話で得たレシピを、材料と手順に整理して保存するレシピ管理アプリです。',
-    color: '#CA6443',      // アイコンの色とそろえる
+    color: '#CA6443',
     textColor: '#CA6443',
-    band: 'bookmark', // 要確認：未公開アプリの帯をどうするか
+    band: 'bookmark',
     reason: '母と自分が、ネットで調べたレシピをまとめて保存できるようにするため作った。',
     points: [
       "AIが出したレシピやWebのレシピ（文章）を、ボタン1つでGemini APIに送り、材料と手順に自動で整理して保存できる",
@@ -180,10 +182,13 @@ export const apps: AppType[] = [
       "最初はチャット形式でレシピ発案から保存までを作っていたが、トークン量が増えすぎたため、Gemini APIに送るのは保存するときだけに変更し、料金とトークンを抑えた",
     ],
     techs: [
-      { name: 'React Native', usage: ['アプリ本体'] },
-      { name: 'TypeScript', usage: ['型定義'] },
-      { name: 'SQLite', usage: ['レシピの保存'] },
-      { name: 'Gemini API', usage: ['レシピの構造化'] },
+      { name: 'React Native', usage: ['iOS・Android両方のアプリ本体'] },
+      { name: 'TypeScript', usage: ['アプリ全体の型定義'] },
+      { name: 'op-sqlite (SQLite)', usage: ['レシピを端末内に保存'] },
+      { name: 'Gemini API', usage: ['文章を材料と手順に自動で整理'] },
+      { name: 'keep-awake', usage: ['調理中に画面が消えないようにする'] },
+      { name: 'wheely', usage: ['タイマーの時間をホイールで選ぶ'] },
+      { name: 'reanimated-color-picker', usage: ['タグの色を選ぶ'] },
     ],
     coder: 'me',
     roles: [
@@ -191,7 +196,7 @@ export const apps: AppType[] = [
       {role: 'ai', text: ['画面のスタイル（見た目）をCodexが担当']},
     ],
     release: 'unrelease',
-    githubUrl: 'https://github.com/hisakawaserai-svg/CookingApp', // 要確認：本当のURL
+    githubUrl: 'https://github.com/hisakawaserai-svg/CookingApp',
     dateInfo: [
       { dateType: 'create', date: '2026-05' },
     ],
@@ -199,7 +204,7 @@ export const apps: AppType[] = [
   {
     id: 'quiz-creator',
     platforms: [
-      { platform: 'Web', platformURL: '' },
+      { platform: 'Web' },
     ],
     release: 'demo',
     coder: 'me',
@@ -232,9 +237,9 @@ export const apps: AppType[] = [
   {
     id: 'portfolio-site',
     platforms: [{ platform: 'Web'}],
-    release: 'release',
+    release: 'unrelease',
     coder: 'me',
-    githubUrl: 'https://github.com/hisakawaserai-svg/portfolio',
+    githubUrl: 'https://github.com/hisakawaserai-svg/portfolio-site',
     description: '自分のアプリや就活の活動を紹介するポートフォリオサイトです。',
     reason: 'ポートフォリオが必要だったのと、React Native は使ったことがあったが、React は未経験だったため。',
     techs: [
@@ -257,5 +262,8 @@ export const apps: AppType[] = [
       {role: 'me', text: ['サイト全体のコーディングを自分で行った。props の型（children、state の更新関数など）は自分で調べて定義した']},
       {role: 'ai', text: ['どのメソッドを使えばよいかのヒントをもらった。スタイルは Claude Design の案から選び、自分で写経した']},
     ],
+    dateInfo: [
+      {dateType: 'create', date: '2026-09'}
+    ]
   }
 ];
