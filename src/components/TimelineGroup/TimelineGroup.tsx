@@ -30,7 +30,7 @@ function TimelinePhase({phase, title}: TimelinePhaseType) {
 
 export default function TimelineGroup() {
   return(
-    <>
+    <div style={{backgroundColor: "var(--page-bg)"}}>
       <HeaderCard index='01' title='これまでの歩み' detail='2025年9月〜' />
       <ol className={styles.container}>
         {timelinePhase.map((phase) => {
@@ -48,6 +48,6 @@ export default function TimelineGroup() {
           )
         })}
       </ol>
-    </>
+    </div>
   )
 }

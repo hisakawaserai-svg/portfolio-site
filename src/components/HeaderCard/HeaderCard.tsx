@@ -3,7 +3,7 @@ import styles from './HaederCard.module.css';
 type HeaderCardProps = {
   index: string,
   title: string,
-  detail: string,
+  detail?: string,
 }
 
 export default function HeaderCard({index, title, detail}: HeaderCardProps) {
