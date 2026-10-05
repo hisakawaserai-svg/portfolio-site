@@ -9,18 +9,3 @@
   flex-direction: column;
   scroll-margin-top: 24px;
 }
-
-.appsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.about {
-  margin: 8px;
-}
-.aboutList {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-}
