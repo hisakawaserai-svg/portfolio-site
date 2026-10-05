@@ -1,6 +1,6 @@
 .container {
   padding-top: 16px;
-  background-color: white;
+  background-color: var(--page-bg);
   flex: 1;
 }
 

@@ -1,5 +1,5 @@
 :root{
-  --page-bg:oklch(0.97 0.003 240);
+  --page-bg:#F0F4F8;
   --panel:oklch(0.995 0.002 240);
   --ink:oklch(0.22 0.006 240);
   --ink-soft:oklch(0.48 0.006 240);
@@ -23,6 +23,7 @@ html {
 body {
   color: var(--ink);
   font-family: var(--font-b);
+  background-color: var(--page-bg);
 }
 
 dd {
