@@ -46,20 +46,6 @@
   font-weight: 700;
   color: var(--step-role-border-color);
 }
-.coderContainer {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 2px 8px 2px 6px;
-  border-radius: 12px;
-  border: 1px var(--step-role-border-type) var(--step-role-border-color);
-  background: var(--step-role-color);
-  color: var(--step-role-text-color);
-}
-.coder {
-  margin-left: 4px;
-}
 
 .text { 
   margin: 0;
