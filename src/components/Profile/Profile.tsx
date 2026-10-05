@@ -1,6 +1,7 @@
 import styles from './Profile.module.css';
 import AppGroup from '../AppGroup/AppGroup';
 import TimelineGroup from '../TimelineGroup/TimelineGroup';
+import IntroductionItem from '../IntroductionItem/IntroductionItem';
 
 type qualification = {
   name: string;
@@ -43,35 +44,9 @@ export default function Profile() {
             <span className={styles.heading}>自己紹介</span>
           </h2>
           <dl className={styles.aboutList}>
-            {descriptionItems.map((desc, index) => {
-              if ('text' in desc){
-                return(
-                  <div key={index}>
-                    <dt>{desc.dt}</dt>
-                    <dd>{desc?.text}</dd>
-                  </div>
-                )}
-              else if ("items" in desc) {
-                return(
-                  <div key={index}>
-                    <dt>{desc.dt}</dt>
-                    <ul>
-                      {desc.items.map((items, index) => {
-                        return(
-                          <li key={index}>{items}</li>
-                        )
-                      })}
-                    </ul>
-                </div>
-                )
-              }
-              else {
-                return(
-                  <>
-                  </>
-                )
-              }
-            })}
+            {descriptionItems.map((desc, index) => 
+                <IntroductionItem key={index} desc={desc} />
+            )}
           </dl>
         </section>
         <section id='process'>

@@ -1,5 +1,5 @@
 :root{
-  --page-bg:#F0F4F8;
+  --page-bg:oklch(0.97 0.003 240);
   --panel:oklch(0.995 0.002 240);
   --ink:oklch(0.22 0.006 240);
   --ink-soft:oklch(0.48 0.006 240);
