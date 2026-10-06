@@ -37,7 +37,7 @@ export default function DevProcess() {
         <DevProcessStep step={step} key={step.stepNum} />
       )}
 
-      <div className={styles.loopContainer}>
+      <ol className={styles.loopContainer}>
         <div className={styles.loopLabel}>
           <RefreshCw size="15" />
           <span>くり返し 3 → 4 → 5 → 3...</span>
@@ -49,7 +49,10 @@ export default function DevProcess() {
           <Undo2 size="15" />
           <span>欲しい機能が出たら 2 設計へ</span>
         </div>
-      </div>
+      </ol>
+      <p className={styles.detailLabel}>
+        ※ Phase 3以降のアプリのコードは、Claude Codeが書きました。自分は、企画・機能の発案・動作の確認・リリースを担当しています。
+      </p>
     </>
   )
 }
