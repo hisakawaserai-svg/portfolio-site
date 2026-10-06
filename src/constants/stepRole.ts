@@ -1,21 +1,28 @@
 import { type StepRole } from "../components/DevProcessStep/DevProcessStep.types";
+import { type CSSProperties } from "react";
 
-export const stepRoleColor: Record<StepRole, string> = {
+const stepRoleColor: Record<StepRole, string> = {
   "me": "var(--navy)",
   "both": "var(--panel)",
   "ai": "var(--panel)",
 }
 
-export const stepRoleTextColor: Record<StepRole, string> = {
+const stepRoleTextColor: Record<StepRole, string> = {
   "me": "var(--panel)",
   "both": "var(--navy)",
   "ai": "oklch(0.5 0.09 195)",
 }
 
-export const stepRoleBorderColor: Record<StepRole, string> = {
+const stepRoleBorderColor: Record<StepRole, string> = {
   "me": "var(--navy)",
   "both": "var(--navy)",
   "ai": "oklch(0.5 0.09 195)",
+}
+
+const stepRoleBorderType: Record<StepRole, string> = {
+  "me": "solid",
+  "both": "solid",
+  "ai": "dashed",
 }
 
 export const stepRoleStr: Record<StepRole, string> = {
@@ -24,14 +31,17 @@ export const stepRoleStr: Record<StepRole, string> = {
   "ai": "AI",
 }
 
-export const stepRoleBorderType: Record<StepRole, string> = {
-  "me": "solid",
-  "both": "solid",
-  "ai": "dashed",
-}
-
 export const stepRoleIcon: Record<StepRole, string[]> = {
   "me": ["user"],
   "both": ["user", "bot"],
   "ai": ["bot"],
+}
+
+export const getStepRoleStyle = (role: StepRole) => {
+  return {
+    "--step-role-color": stepRoleColor[role], 
+    "--step-role-text-color": stepRoleTextColor[role],
+    "--step-role-border-color": stepRoleBorderColor[role],
+    "--step-role-border-type": stepRoleBorderType[role]
+  } as CSSProperties;
 }

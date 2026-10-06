@@ -3,15 +3,14 @@ import type { IconName } from "lucide-react/dynamic";
 
 import type { StepRole } from "../DevProcessStep.types"
 import styles from "./CoderCard.module.css";
-import { stepRoleIcon, stepRoleStr } from "../../../constants/stepRole";
+import { stepRoleIcon, stepRoleStr, getStepRoleStyle } from "../../../constants/stepRole";
 
 type CoderCardProps = {
   stepRole: StepRole;
-
 }
 export default function CoderCard({stepRole}: CoderCardProps) {
   return(
-    <span className={styles.coderContainer}>
+    <span className={styles.coderContainer} style={getStepRoleStyle(stepRole)}>
       {stepRoleIcon[stepRole].map((icon, index) => {
         return(
           <DynamicIcon name={icon as IconName} size={13} color="var(--step-role-text-color)" key={index} />
