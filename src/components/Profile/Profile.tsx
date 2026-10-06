@@ -5,9 +5,6 @@ import IntroductionGroup from '../IntroductionGroup/IntroductionGroup';
 import DevProcess from '../DevProcess/DevProcess';
 import SkillGroup from '../SkillGroup/SkillGroup';
 
-import SkillItem from '../SkillItem/SkillItem';
-import { skills } from '../../data/skills';
-
 export default function Profile() { 
   return (
     <div className={styles.container}>
@@ -27,7 +24,6 @@ export default function Profile() {
         <section id='skills'>
           <SkillGroup />
         </section>
-        <SkillItem skill={skills[0]} />
       </main>
     </div>
   )
