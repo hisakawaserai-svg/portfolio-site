@@ -1,13 +1,18 @@
 import styles from "./SkillItem.module.css";
+import StepIndicator from "./StepIndicator/StepIndicator";
+import { type SkillItemType } from "./SkillItem.types";
 
-export default function SkillItem() {
+type SkillItemProps = {
+  skill: SkillItemType;
+}
+export default function SkillItem({skill}: SkillItemProps) {
   return(
-    <li>
-      <span className={styles.skillLabel}>{/* スキル名 */}</span>
+    <li className={styles.container}>
+      <span className={styles.skillLabel}>{skill.name}</span>
       <div className={styles.stepIndicatorContainer}>
-        <div className={styles.stepIndicator} aria-hidden="true"></div>
+        <StepIndicator level={skill.level} />
       </div>
-
+      <p className={styles.text}>{skill.text}</p>
     </li>
   )
 }

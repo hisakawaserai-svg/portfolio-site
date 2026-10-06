@@ -4,7 +4,9 @@ import TimelineGroup from '../TimelineGroup/TimelineGroup';
 import IntroductionGroup from '../IntroductionGroup/IntroductionGroup';
 import DevProcess from '../DevProcess/DevProcess';
 import SkillGroup from '../SkillGroup/SkillGroup';
-import StepIndicator from "../SkillItem/StepIndicator/StepIndicator"
+
+import SkillItem from '../SkillItem/SkillItem';
+import { skills } from '../../data/skills';
 
 export default function Profile() { 
   return (
@@ -25,7 +27,7 @@ export default function Profile() {
         <section id='skills'>
           <SkillGroup />
         </section>
-        <StepIndicator level={1} />
+        <SkillItem skill={skills[0]} />
       </main>
     </div>
   )
