@@ -27,7 +27,7 @@ export default function DevProcess() {
       </div>
 
       {/* 2: タイトル */}
-      <h3 className={styles.phaseLabel}>Phase 3~ 私のアプリ開発の進め方</h3>
+      <h3 className={styles.phaseLabel}>Phase 3〜 私のアプリ開発の進め方</h3>
       <div className={styles.coderLabel}>
         <span className={styles.label}>担当</span>
         {CoderRoles.map(coder => <CoderCard stepRole={coder} key={coder} />)}
