@@ -11,19 +11,8 @@
   font-weight: 700;
 }
 
-.stepIndicatorContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 0 4px;
-}
-.stepIndicator {
-  display: flex;
-  align-items: center;
-}
-
 .text {
-  margin: 0;
+  margin: 20px 0 0 0;
   font-size: 13.5px;
   line-height: 1.6;
   color: var(--ink-soft);
