@@ -1,0 +1,15 @@
+.skillLabel {
+  font-size: 15.5px;
+  font-weight: 700;
+}
+
+.stepIndicatorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 4px;
+}
+.stepIndicator {
+  display: flex;
+  align-items: center;
+}

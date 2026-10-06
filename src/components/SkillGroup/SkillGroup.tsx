@@ -1,4 +1,3 @@
-import styles from "./SkillGroup.module.css";
 import HeaderCard from "../HeaderCard/HeaderCard";
 
 export default function SkillGroup() {
