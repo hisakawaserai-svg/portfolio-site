@@ -22,3 +22,26 @@
   font-weight: 700;
   color: var(--gray);
 }
+
+.loopContainer {
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  background: var(--panel);
+  margin-left: -8px;
+  padding: 0 0 0 8px;
+}
+.loopLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px 8px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--thin);
+}
+.loopBorderDashed {
+  border-top: 1.5px dashed var(--thin);
+  border-bottom: none;
+  margin: 0;
+}
