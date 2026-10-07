@@ -1,8 +1,8 @@
 import styles from "./StepCircle.module.css";
-import { indicatorLabel, type Level } from "../../constants/indicator";
+import { indicatorLabel, type SkillLevel } from "../../constants/indicator";
 
 type StepCircleProps = {
-  num: Level;
+  num: SkillLevel;
   reached: boolean;
   descMode?: boolean;
 }

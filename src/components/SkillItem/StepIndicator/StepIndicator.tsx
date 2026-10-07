@@ -1,10 +1,10 @@
 import { type CSSProperties } from "react";
 
-import { type Level } from "../../../constants/indicator";
+import { type SkillLevel } from "../../../constants/indicator";
 import styles from "./StepIndicator.module.css";
 import StepCircle from "../../StepCircle/StepCircle";
 
-const numbers: Level[] = [1, 2, 3, 4]
+const numbers: SkillLevel[] = [1, 2, 3, 4]
 
 type StepIndicatorProps = {
   level: number;

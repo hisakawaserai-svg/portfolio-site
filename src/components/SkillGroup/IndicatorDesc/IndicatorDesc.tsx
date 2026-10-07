@@ -1,6 +1,6 @@
 import styles from "./IndicatorDesc.module.css";
 import StepCircle from "../../StepCircle/StepCircle";
-import type { Level } from "../../../constants/indicator";
+import type { SkillLevel } from "../../../constants/indicator";
 import type { CSSProperties } from "react";
 
 export default function IndicatorDesc() {
@@ -18,7 +18,7 @@ export default function IndicatorDesc() {
         {Array.from({length: 4}).map((_, index) => {
           return(
             <li key={index} className={styles.li}>
-              <StepCircle num={index+1 as Level} reached={true} descMode={true} />
+              <StepCircle num={index+1 as SkillLevel} reached={true} descMode={true} />
             </li>
           )
         })}
