@@ -1,7 +1,8 @@
 import { type CSSProperties } from "react";
 
-import { indicatorLabel, type Level } from "../../../constants/indicator";
+import { type Level } from "../../../constants/indicator";
 import styles from "./StepIndicator.module.css";
+import StepCircle from "../../StepCircle/StepCircle";
 
 const numbers: Level[] = [1, 2, 3, 4]
 
@@ -15,6 +16,7 @@ export default function StepIndicator({level}: StepIndicatorProps) {
         <span className={styles.stepContainer}>
           {numbers.map(num => {
             const isReach = num <= level;
+            const reache = num === level;
             return(
               <div className={styles.stepContainer} key={num} style={{
                 "--color": isReach ? "white" : "var(--navy)",
@@ -23,14 +25,7 @@ export default function StepIndicator({level}: StepIndicatorProps) {
                 flex: num === numbers.length ? "0 0 auto" : "1 1 0",
               } as CSSProperties}>
                 <span className={styles.stepWrapper}>
-                  <span className={styles.step}>{num}</span>
-                  {num === level && (
-                    <p className={`
-                      ${styles.indicatorLabel} 
-                      ${num === 1 ? styles.labelStart : ""}
-                      ${num === numbers.length ? styles.labelEnd : ""}
-                    `}>{indicatorLabel[level]}</p>
-                  )}
+                  <StepCircle num={num} reached={reache} />
                 </span>
                 {(num !== 4) && <span className={styles.bar} style={{
                   background: !isReach || num === level ? "oklch(0.88 0.004 240)" : "var(--navy)",

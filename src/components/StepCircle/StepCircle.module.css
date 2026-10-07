@@ -1,0 +1,46 @@
+.step {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-m);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color);
+  background: var(--background);
+  border: var(--border)
+}
+
+.indicatorLabel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+  white-space: nowrap;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--navy);
+}
+
+.labelStart {
+  left: 0;
+  transform: none;
+}
+.labelEnd {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.descMode {
+  position: static;
+  transform: none;
+  white-space: normal;
+  text-align: center;
+}
