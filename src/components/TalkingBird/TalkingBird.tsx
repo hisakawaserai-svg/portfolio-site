@@ -1,8 +1,9 @@
 import type { SetStateAction } from 'react';
-import BirdMascot, { getVariant } from '../BirdMascot/BirdMascot';
+import BirdMascot from '../BirdMascot/BirdMascot';
 import Touchable from '../Touchable/Touchable';
 import styles from './TalkingBird.module.css';
 import { shuffle } from '../../utils/shuffle';
+import { getVariant } from '../../utils/getVariant';
 
 type TalkingBirdProps = {
   talks: string[];
