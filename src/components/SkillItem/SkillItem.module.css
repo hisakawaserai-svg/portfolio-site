@@ -18,3 +18,22 @@
   color: var(--ink-soft);
   text-wrap: pretty;
 }
+
+.indicatorContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+.indicator {
+  flex: 1 1 200px;
+  margin: 0 4px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .indicator {
+    max-width: 200px;
+  }
+}
