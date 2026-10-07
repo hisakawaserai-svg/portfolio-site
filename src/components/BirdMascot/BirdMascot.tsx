@@ -1,4 +1,4 @@
-export type Variant = 'day' | 'night' | 'sleep';
+import { type Variant } from "./BirdMascot.types";
 
 type BirdMascotProps = {
   variant: Variant;
