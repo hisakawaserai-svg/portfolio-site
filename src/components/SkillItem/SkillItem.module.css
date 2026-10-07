@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--thin);
+}
+
+.skillLabel {
+  font-size: 15.5px;
+  font-weight: 700;
+}
+
+.text {
+  margin: 20px 0 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.indicatorContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+.indicator {
+  flex: 1 1 200px;
+  margin: 0 4px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .indicator {
+    max-width: 200px;
+  }
+}

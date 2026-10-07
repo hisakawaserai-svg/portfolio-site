@@ -3,6 +3,7 @@ import AppGroup from '../AppGroup/AppGroup';
 import TimelineGroup from '../TimelineGroup/TimelineGroup';
 import IntroductionGroup from '../IntroductionGroup/IntroductionGroup';
 import DevProcess from '../DevProcess/DevProcess';
+import SkillGroup from '../SkillGroup/SkillGroup';
 
 export default function Profile() { 
   return (
@@ -21,11 +22,7 @@ export default function Profile() {
           <DevProcess />
         </section>
         <section id='skills'>
-          <h2 className={styles.headingContainer}>
-            <span className={styles.index}>04</span>
-            <span className={styles.heading}>技術</span>
-            <span className={styles.headingRight}>今の正直なレベル</span>
-          </h2>
+          <SkillGroup />
         </section>
       </main>
     </div>

@@ -1,0 +1,22 @@
+.stepIndicatorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 4px;
+}
+.stepIndicator {
+  display: flex;
+  align-items: center;
+}
+.stepContainer {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+}
+.bar {
+  flex: 1 1 0;
+  height: 2px;
+  display: block;
+}
+
+.stepWrapper { position: relative; }
