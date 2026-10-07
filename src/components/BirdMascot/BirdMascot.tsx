@@ -1,14 +1,8 @@
-type Variant = 'day' | 'night' | 'sleep';
+export type Variant = 'day' | 'night' | 'sleep';
 
 type BirdMascotProps = {
   variant: Variant;
   size: number;
-}
-
-export const getVariant = (hour: number): Variant => {
-  if (hour >= 6 && hour < 15) return 'day';
-  if (hour >= 15 && hour < 24) return 'night';
-  return 'sleep'
 }
 
 type Z = {
