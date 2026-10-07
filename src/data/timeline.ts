@@ -9,7 +9,7 @@ export const timeline: TimelineEventType[] = [
   { phase: 2, date: '2026年5月', title: 'Quiz-Creator-App（JavaScript）',
     coderLabel: '自力＋AI相談', appId: 'quiz-creator' },
   { phase: 2, date: '2026年5月', title: 'CookingApp',
-    coderLabel: '自力（スタイルはAI）', appId: 'cooking-app' },
+    coderLabel: '自力＋AI相談', appId: 'cooking-app' },
   {
     phase: 2,
     date: '2026年5月末〜6月',
