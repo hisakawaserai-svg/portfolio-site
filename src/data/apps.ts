@@ -192,7 +192,7 @@ export const apps: AppType[] = [
     ],
     coder: 'me',
     roles: [
-      {role: 'me', text: ['データ構造とロジックを自力でコーディング。AIにはわからない所だけ質問']},
+      {role: 'me', text: ['データ構造とロジックを、AIのヒントをもらいながらコーディング']},
       {role: 'ai', text: ['画面のスタイル（見た目）をCodexが担当']},
     ],
     release: 'unrelease',
