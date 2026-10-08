@@ -245,7 +245,10 @@
   .ddDivTech {
     grid-template-columns: 1fr;
   }
-  dd {
+  .container dd {
     margin-left: 8px;
+  }
+  .ddGrid {
+    grid-template-columns: 1fr;
   }
 }
