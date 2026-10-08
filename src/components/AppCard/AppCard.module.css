@@ -103,6 +103,7 @@
   font-weight: 700;
   color: var(--gray);
   padding-top: 2px;
+  text-wrap: pretty;
 }
 .dd {
   font-size: 14px;
@@ -245,7 +246,7 @@
   .ddDivTech {
     grid-template-columns: 1fr;
   }
-  .container dd {
+  .container .dd {
     margin-left: 8px;
   }
   .ddGrid {
