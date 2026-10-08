@@ -1,10 +1,15 @@
 .headingContainer {
   display: flex;
   align-items: baseline;
-  gap: 14px;
   margin: 0;
   padding-bottom: 4px;
   border-bottom: 1px solid var(--ink);
+}
+
+.mainContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
 }
 .index {
   font-size: 12px;
@@ -20,5 +25,10 @@
   margin-left: auto;
   color: var(--gray);
   font-size: 12.5px;
-  white-space: nowrap;
+}
+
+@media (max-width: 768px){
+  .headingContainer {
+    flex-direction: column;
+  }
 }
