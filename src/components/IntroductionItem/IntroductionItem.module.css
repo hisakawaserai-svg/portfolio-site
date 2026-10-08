@@ -42,3 +42,12 @@ li {
   font-size: 11px;
   color: var(--line)
 }
+
+@media (max-width: 768px) {
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .container dt{
+    font-size: 17px;
+  }
+}

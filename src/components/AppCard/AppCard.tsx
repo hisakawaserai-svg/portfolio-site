@@ -118,7 +118,7 @@ export default function AppCard({app, index}: AppCardProps) {
             </dd>
             {showTechNumber && (
               <div className={styles.ddDivTech} ref={techRef}>
-                <dt className={`${styles.dt} ${styles.margin}`}>{app.techs[showTechNumber - 1].name} / 具体例</dt>
+                <dt className={`${styles.dt} ${styles.margin}`}>具体例: {app.techs[showTechNumber - 1].name}</dt>
                 <dd className={styles.dd}>
                   {app.techs[showTechNumber - 1].usage.map((use, index) => {
                     const indexString = String(index + 1).padStart(2, '0');

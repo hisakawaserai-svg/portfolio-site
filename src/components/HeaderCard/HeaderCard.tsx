@@ -9,8 +9,10 @@ type HeaderCardProps = {
 export default function HeaderCard({index, title, detail}: HeaderCardProps) {
   return(
     <h2 className={styles.headingContainer}> 
-      <span className={styles.index}>{index}</span> 
-      <span className={styles.heading}>{title}</span> 
+      <span className={styles.mainContainer}>
+        <span className={styles.index}>{index}</span> 
+        <span className={styles.heading}>{title}</span> 
+      </span>
       <span className={styles.headingRight}>{detail}</span>
     </h2>
   )

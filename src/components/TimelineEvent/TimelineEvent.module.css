@@ -114,3 +114,9 @@
   width: 10;
   height: 15;
 }
+
+@media (max-width: 768px){
+  .container {
+    grid-template-columns: 60px 20px 1fr;
+  }
+}

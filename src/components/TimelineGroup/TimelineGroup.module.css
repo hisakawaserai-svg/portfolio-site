@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 84px 20px minmax(0px, 1fr);
   column-gap: 16px;
-  padding-top: 4px;
 }
 .emptyArea {
   display: block;
@@ -16,7 +15,7 @@
 }
 .centerBar {
   position: absolute;
-  top: 14px;
+  top: 0;
   bottom: 0;
   left: 50%;
   width: 1px;
@@ -35,8 +34,8 @@
   display: flex;
   align-items: baseline;
   gap: 10px;
-  padding: 2px 0 4px;
   flex-wrap: wrap;
+  padding: 10px 5px;
 }
 .phase {
   font-family: var(--font-m);
@@ -49,9 +48,23 @@
   font-size: 19px;
   font-weight: 600;
   letter-spacing: 0.03em;
+  margin: 0;
 }
 
 /* main */
 .container {
   margin: 16px 0;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px){
+  .container {
+    padding: 0;
+  }
+  .phaseContainer {
+    grid-template-columns: 60px 20px 1fr;
+  }
+  .phase {
+    margin-top: 4px;
+  }
 }
