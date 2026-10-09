@@ -20,9 +20,11 @@
 
   opacity: 0;
   transition: opacity 300ms ease-out;
+  pointer-events: none;
 }
 .overlayShow {
   opacity: 0.5;
+  pointer-events: auto;
 }
 
 @media (max-width: 768px) {
