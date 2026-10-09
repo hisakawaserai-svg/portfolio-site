@@ -1,11 +1,11 @@
 import styles from './App.module.css';
 import Profile from './components/Profile/Profile';
-import TableOfContents from './components/TableOfContents/TableOfContents';
+import TableOfContentsWrapper from './components/TableOfContentsWrapper/TableOfContentsWrapper';
 
 function App() {
   return (
     <div className={styles.container}>
-      <TableOfContents />
+      <TableOfContentsWrapper />
       <Profile />
     </div>
   )

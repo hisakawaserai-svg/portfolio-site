@@ -1,0 +1,54 @@
+.placeholder {
+  position: sticky;
+  top: max(calc(50vh - 360px), 16px);
+  width: 360px;
+  height: calc(100vh - 16px - 16px);
+  max-height: 720px;
+  flex-shrink: 0;
+  z-index: 1000;
+}
+
+.container {
+  z-index: 999;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 998;
+
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+.overlayShow {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .placeholder{
+    position: relative;
+    width: auto;
+    height: 500px;
+    top: 10px;
+  }
+
+  @keyframes peekIn {
+    from { transform: translate(-50%, 100%);}
+    to { transform: translate(-50%, calc(100% - 70px))}
+  }
+
+  .container[data-state="peek"],
+  .container[data-state="open"] {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+
+    width: min(340px, calc(100vw - 32px));
+    animation: peekIn 400ms ease-out;
+    transition: transform 300ms ease-out;
+  }
+
+  .container[data-state="peek"] { transform: translate(-50%, calc(100% - 70px));}
+  .container[data-state="open"] { transform: translate(-50%, -16px);}
+}
