@@ -1,13 +1,7 @@
-import { IdCard, User, type LucideIcon} from 'lucide-react';
-
 import styles from './AppIcons.module.css'
 import AppIcon from '../../AppIcon/AppIcon';
 import { navIcons } from '../../../data/navIcons';
-
-const ICON_COMPONENTS: Record<string, LucideIcon> = {
-  idCard: IdCard,
-  user: User,
-}
+import { ICON_COMPONENTS } from '../../../constants/appIcons';
 
 export default function AppIcons() {
   return(

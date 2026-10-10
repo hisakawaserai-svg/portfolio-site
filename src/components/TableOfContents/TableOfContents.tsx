@@ -5,6 +5,7 @@ import styles from './TableOfContents.module.css';
 import StatusBar from './StatusBar/StatusBar';
 import LineCard from './LineCard/LineCard';
 import AppIcons from './AppIcons/AppIcons';
+import TabBarGroup from './TabBarGroup/TabBarGroup';
 
 type TableOfContentsProps = {
   talks: string[];
@@ -43,6 +44,7 @@ export default function TableOfContents({
         </div>
         {/* アプリ */}
         <AppIcons />
+        <TabBarGroup />
       </div>
     </div>
   )
