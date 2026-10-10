@@ -1,20 +1,8 @@
 import { IdCard, User, type LucideIcon} from 'lucide-react';
 
 import styles from './AppIcons.module.css'
-import { type AppIconType } from '../../AppIcon/AppIcon.types';
 import AppIcon from '../../AppIcon/AppIcon';
-import reporokuImg from '/reporoku.png';
-
-type AppIconImgType = AppIconType & {
-  icon?: string;
-  imgSrc?: string;
-}
-
-const navIcons: AppIconImgType[] = [
-  {label: "名前", icon: "idCard", href: "#name", color: "white"},
-  {label: "自己紹介", icon: "user", href: "#about", color: "white"},
-  {label: "レポろく", imgSrc: reporokuImg, href: "#レポろく", color: "#4B56C0"},
-]
+import { navIcons } from '../../../data/navIcons';
 
 const ICON_COMPONENTS: Record<string, LucideIcon> = {
   idCard: IdCard,
