@@ -7,7 +7,11 @@ import { shuffle } from '../../utils/shuffle';
 import { initialTalks } from '../../data/initialTalks';
 import TableOfContents from '../TableOfContents/TableOfContents';
 
-export default function TableOfContentsWrapper() {
+type TableOfContentsWrapperProps = {
+  actionId: string;
+}
+
+export default function TableOfContentsWrapper({actionId}: TableOfContentsWrapperProps) {
   const [talks, setTalks] = useState<string[]>(() => shuffle(initialTalks));
   const [index, setIndex] = useState<number>(0);
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -34,6 +38,8 @@ export default function TableOfContentsWrapper() {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           isOut={isOut}
+
+          actionId={actionId}
         />
       </div>
         <div 

@@ -18,10 +18,12 @@ type TableOfContentsProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<SetStateAction<boolean>>;
   isOut: boolean;
+
+  actionId: string;
 }
 
 export default function TableOfContents({
-  talks, index, isShow, setTalks, setIndex, setIsShow, isOpen, setIsOpen, isOut
+  talks, index, isShow, setTalks, setIndex, setIsShow, isOpen, setIsOpen, isOut, actionId,
 }: TableOfContentsProps) {
   return(
     <div className={styles.container}>
@@ -44,7 +46,7 @@ export default function TableOfContents({
         </div>
         {/* アプリ */}
         <AppIcons />
-        <TabBarGroup />
+        <TabBarGroup actionId={actionId} />
       </div>
     </div>
   )
