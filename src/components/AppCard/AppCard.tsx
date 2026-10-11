@@ -6,6 +6,7 @@ import styles from './AppCard.module.css';
 import { type AppType } from './AppCard.types';
 import { Code, MoveRight } from 'lucide-react';
 import { releaseLabel, releaseColor } from '../../constants/release';
+import DemoBadge from './DemoBadge/DemoBadge';
 
 type AppCardProps = {
   app: AppType,
@@ -164,10 +165,14 @@ export default function AppCard({app, index}: AppCardProps) {
               return(
                 p.platformURL && (
                   <a href={p.platformURL} className={styles.urlA} key={index}>
-                    <img src={isIOS ? '/app-store-badge.svg' : '/google-play-badge.svg'} 
-                      alt={isIOS ? 'AppStoreBadge' : 'GooglePlayBadge'} 
-                      className={styles.urlImg}
-                    />
+                    {(p.platform === "iOS") || (p.platform === "Android") ? (
+                      <img src={isIOS ? '/app-store-badge.svg' : '/google-play-badge.svg'} 
+                        alt={isIOS ? 'AppStoreBadge' : 'GooglePlayBadge'} 
+                        className={styles.urlImg}
+                      />
+                    ):(
+                      <DemoBadge />
+                    )}
                   </a>
                 )
               )

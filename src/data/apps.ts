@@ -204,7 +204,10 @@ export const apps: AppType[] = [
   {
     id: 'quiz-creator',
     platforms: [
-      { platform: 'Web' },
+      { 
+        platform: 'Web',
+        platformURL: "https://hisakawaserai-svg.github.io/Quiz-Creator-App/" 
+      },
     ],
     release: 'demo',
     coder: 'me',
