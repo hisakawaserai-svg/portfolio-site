@@ -1,12 +1,15 @@
+import {useState} from'react';
+
 import styles from './App.module.css';
 import Profile from './components/Profile/Profile';
-import TableOfContents from './components/TableOfContents/TableOfContents';
+import TableOfContentsWrapper from './components/TableOfContentsWrapper/TableOfContentsWrapper';
 
 function App() {
+  const [actionId, setActionId] = useState<string>('');
   return (
     <div className={styles.container}>
-      <TableOfContents />
-      <Profile />
+      <TableOfContentsWrapper actionId={actionId} />
+      <Profile setActionId={setActionId} />
     </div>
   )
 }

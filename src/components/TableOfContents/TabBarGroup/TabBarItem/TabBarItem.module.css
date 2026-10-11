@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.imgContainer {
+  height: 32px;
+  width: 40px;
+  border-radius: 16px;
+  background: var(--icon-bg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2 ease-in-out;
+}
+
+.label {
+  font-size: 10px;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  font-weight: 400;
+}

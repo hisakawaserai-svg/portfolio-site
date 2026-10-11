@@ -41,7 +41,9 @@ export default function AppCard({app, index}: AppCardProps) {
           {app.image ? (
             <img className={styles.icon} src={app.image} alt={`${app.title}のアイコン`} />
           ) : (
-            <p className={styles.icon} style={{background: app.gradient ?? app.color}}>アイコンなし</p>
+            <p className={styles.icon} style={{background: app.gradient ?? app.color}}>
+              <span className={styles.labelIcon}>{app.title[0]}</span>
+            </p>
           )}
           <div className={styles.headerTitle}>
             <div className={styles.appTitleBar}>

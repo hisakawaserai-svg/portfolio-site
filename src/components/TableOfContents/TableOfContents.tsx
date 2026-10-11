@@ -1,44 +1,34 @@
-import { useState } from 'react';
+import { type SetStateAction } from 'react';
 
 import TalkingBird from '../TalkingBird/TalkingBird';
 import styles from './TableOfContents.module.css';
-import { shuffle } from '../../utils/shuffle';
 import StatusBar from './StatusBar/StatusBar';
 import LineCard from './LineCard/LineCard';
 import AppIcons from './AppIcons/AppIcons';
+import TabBarGroup from './TabBarGroup/TabBarGroup';
 
-const initialTalks: string[] = [
-  // 何者か
-  "seraiは通信制の大学でITを学んでるよ",
-  "目指してるのは、スマホアプリのエンジニア！",
-  // 作ったもの
-  "seraiはアプリを3本出してるんだ",
-  "スタンプ抜きは、iPhoneとAndroidの両方に出したよ",
-  "ストアの審査も、広告の設定も、全部ひとりでやったんだ",
-  // エピソード
-  "アプリ開発の始まりは、お母さんの『面倒だ』だったんだ",
-  "うりつみはSwiftからReact Nativeに引っ越したよ",
-  // 開発の仕方
-  "seraiはAIと役割分担して作ってるよ",
-  // 人柄・続ける力
-  "seraiのDuolingo、450日続いてるんだって",
-  "Reactは、始めたばかり。いま勉強中！",
-  "このページも、Reactで作ったんだよ",
-  // 遊び
-  "クリックしてくれてありがとう！",
-  "もう1回押すと、別の話をするよ",
-  "時間帯によって、ぼくの姿が変わるよ！",
-];
+type TableOfContentsProps = {
+  talks: string[];
+  index: number;
+  isShow: boolean;
+  setTalks: React.Dispatch<SetStateAction<string[]>>;
+  setIndex: React.Dispatch<SetStateAction<number>>;
+  setIsShow: React.Dispatch<SetStateAction<boolean>>;
 
-export default function TableOfContents() {
-  const [talks, setTalks] = useState<string[]>(() => shuffle(initialTalks));
-  const [index, setIndex] = useState<number>(0);
-  const [isShow, setIsShow] = useState<boolean>(false);
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  isOut: boolean;
 
+  actionId: string;
+}
+
+export default function TableOfContents({
+  talks, index, isShow, setTalks, setIndex, setIsShow, isOpen, setIsOpen, isOut, actionId,
+}: TableOfContentsProps) {
   return(
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <StatusBar />
+        <StatusBar isOpen={isOpen} setIsOpen={setIsOpen} isOut={isOut} />
         {/* 自己紹介 */}
         <header className={styles.nameContainer}>
           <div className={styles.nameSection}>
@@ -56,6 +46,7 @@ export default function TableOfContents() {
         </div>
         {/* アプリ */}
         <AppIcons />
+        <TabBarGroup actionId={actionId} />
       </div>
     </div>
   )

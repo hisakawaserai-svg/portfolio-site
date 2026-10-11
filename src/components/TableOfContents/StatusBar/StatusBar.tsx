@@ -1,9 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type SetStateAction } from 'react';
+
+import { Battery, ChevronUp, ChevronDown } from 'lucide-react';
 
 import styles from './StatusBar.module.css';
-import { Battery } from 'lucide-react';
+import Touchable from '../../Touchable/Touchable';
 
-export default function StatusBar() {
+type StatusBarProps = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  isOut: boolean;
+}
+export default function StatusBar({isOpen, setIsOpen, isOut}: StatusBarProps) {
   const [time, setTime] = useState<Date>(new Date());
 
   useEffect(() => {
@@ -23,7 +30,24 @@ export default function StatusBar() {
   return(
     <div className={styles.container}>
       <p>{h}:{m}</p>
-      <Battery />
+      {isOut && (
+        <Touchable onClick={() => setIsOpen(!isOpen)} className={styles.openContainer}>
+          {isOpen ? (
+            <>
+              <ChevronDown />
+              <span>閉じる</span>
+            </>
+          ):(
+            <>
+              <ChevronUp />
+              <span>目次</span>
+            </>
+          )}
+        </Touchable>
+      )}
+      <div className={styles.battery}>
+        <Battery />
+      </div>
     </div>
   )
 }
