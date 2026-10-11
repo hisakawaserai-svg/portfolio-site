@@ -237,7 +237,7 @@ export const apps: AppType[] = [
   {
     id: 'portfolio-site',
     platforms: [{ platform: 'Web'}],
-    release: 'unrelease',
+    release: 'demo',
     coder: 'me',
     githubUrl: 'https://github.com/hisakawaserai-svg/portfolio-site',
     description: '自分のプログラミングと開発の歴史、作ったアプリを紹介するポートフォリオサイトです。（このページ）',
@@ -247,6 +247,7 @@ export const apps: AppType[] = [
       { name: 'TypeScript', usage: ['props や state の型を定義'] },
       { name: 'lucide-react', usage: ['アイコンの表示'] },
       { name: 'Vite', usage: ['開発中の確認用サーバーと、公開用ファイルへのビルド'] },
+      { name: 'react-intersection-observer', usage: ['useInView で、画面に表示されているセクションを検知して目次に反映', '目次が画面の外に出たかを判定し、表示を切り替え'] },
     ],
     title: 'portfolio',
     color: '#7A4E9E',
