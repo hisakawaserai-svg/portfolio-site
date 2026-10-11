@@ -2,6 +2,7 @@ import styles from './TabBarItem.module.css';
 import { ICON_COMPONENTS } from '../../../../constants/appIcons';
 import { type TabBarItemTypes } from './TabBarItem.types';
 import type { CSSProperties } from 'react';
+import Touchable from '../../../Touchable/Touchable';
 
 type TabBarItemProps = TabBarItemTypes & {
   flag?: boolean;
@@ -17,9 +18,9 @@ export default function TabBarItem({id, label, icon, flag}: TabBarItemProps) {
         "--icon-color": flag ? "white" : "black",
       } as CSSProperties}
     >
-      <div className={styles.imgContainer}>
+      <Touchable className={styles.imgContainer}>
         <IconComponent size={22} color="var(--icon-color)"/>
-      </div>
+      </Touchable>
       <span className={styles.label}>
         {label}
       </span>
