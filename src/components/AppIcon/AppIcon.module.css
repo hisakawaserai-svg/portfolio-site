@@ -26,7 +26,9 @@
   transform: scale(0.9);
 }
 
-.container p {
+.label {
   margin: 4px;
   font-size: small;
+
+  text-align: center;
 }
