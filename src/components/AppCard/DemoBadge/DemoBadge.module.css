@@ -1,0 +1,30 @@
+.container {
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 14px 0 11px;
+  background: black;
+  color: white;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  gap: 2px;
+}
+
+.browser {
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+}
+.demo {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
