@@ -238,8 +238,8 @@ export const apps: AppType[] = [
   },
   {
     id: 'portfolio-site',
-    platforms: [{ platform: 'Web'}],
-    release: 'demo',
+    platforms: [{ platform: 'Web', platformURL: 'https://portfolio-site-hisakawaserai.vercel.app/'}],
+    release: 'release',
     coder: 'me',
     githubUrl: 'https://github.com/hisakawaserai-svg/portfolio-site',
     description: '自分のプログラミングと開発の歴史、作ったアプリを紹介するポートフォリオサイトです。（このページ）',

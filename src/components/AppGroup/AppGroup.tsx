@@ -18,7 +18,7 @@ const [release, unrelease, demo] = apps.reduce((acc, app) => {
 }, [[], [], []] as AppType[][]);
 
 const releasePlatformLabel: Record<ReleaseType, string> = {
-  'release': 'App Store・Google Play',
+  'release': 'App Store・Google Play・Web',
   'unrelease': '',
   'demo': 'ブラウザで動く',
 }

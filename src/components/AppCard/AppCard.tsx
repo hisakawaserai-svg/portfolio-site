@@ -5,7 +5,7 @@ import Touchable from '../Touchable/Touchable';
 import styles from './AppCard.module.css';
 import { type AppType } from './AppCard.types';
 import { Code, MoveRight } from 'lucide-react';
-import { releaseLabel, releaseColor } from '../../constants/release';
+import { releaseLabel, releaseColor, webBadgeLabel } from '../../constants/release';
 import DemoBadge from './DemoBadge/DemoBadge';
 
 type AppCardProps = {
@@ -171,7 +171,7 @@ export default function AppCard({app, index}: AppCardProps) {
                         className={styles.urlImg}
                       />
                     ):(
-                      <DemoBadge />
+                      <DemoBadge label={webBadgeLabel[app.release]} />
                     )}
                   </a>
                 )
