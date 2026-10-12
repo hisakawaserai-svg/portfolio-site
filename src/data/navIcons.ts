@@ -16,6 +16,6 @@ export const navIcons: AppIconImgType[] = [
   {label: "レポろく", imgSrc: reporokuImg, href: "#レポろく"},
   {label: "クイズ", href: "#Quiz-Creator-App", color: "linear-gradient(135deg, #2F7D5B, #5BB98C)"},
   {label: "クッキング", imgSrc: cookingAppImg, href: "#CookingApp"},
-  {label: "ポートフォリオ", href: "#portfolio", color: "linear-gradient(135deg, #7A4E9E, #c8a1e9)"},
+  {label: "ポートフォリオ", imgSrc: "/apple-touch-icon.png", href: "#portfolio"},
   {label: "純利益計算機", imgSrc: profitCalcImg, href: "#純利益計算機"},
 ]
