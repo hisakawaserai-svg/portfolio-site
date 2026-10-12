@@ -272,7 +272,8 @@ export const apps: AppType[] = [
     ],
     dateInfo: [
       {dateType: 'create', date: '2026-09'}
-    ]
+    ],
+    image: "/apple-touch-icon.png"
   },
   {
     id: 'profit-calculator',
