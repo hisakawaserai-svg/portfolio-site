@@ -171,7 +171,7 @@ export default function AppCard({app, index}: AppCardProps) {
                         className={styles.urlImg}
                       />
                     ):(
-                      <DemoBadge />
+                      <DemoBadge release={app.release} />
                     )}
                   </a>
                 )

@@ -10,3 +10,8 @@ export const releaseColor: Record<ReleaseType, string> = {
   'unrelease': 'transparent',
   'demo': 'var(--ink)',
 }
+export const webBadgeLabel: Record<ReleaseType, string> = {
+  'release': 'Webを開く',
+  'unrelease': '',
+  'demo': 'デモを開く',
+}

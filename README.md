@@ -4,12 +4,16 @@ React＋TypeScript で作った、アプリ開発のポートフォリオサイ�
 
 | | |
 | --- | --- |
-| サイト | <!-- Vercel の URL --> |
+| サイト | https://portfolio-site-hisakawaserai.vercel.app/ |
 | 技術 | React / TypeScript / Vite / lucide-react / react-intersection-observer |
 | コード | 自分で書いた（AIはヒントとデザイン案） |
 | 作成 | 2026年9月 |
 
-<!-- ![サイトのスクリーンショット](docs/screenshot.png) -->
+## サイトのスクリーンショット
+
+| PC | スマホ |
+| --- | --- |
+| <img src="docs/portfolio.png" width="600"> | <img src="docs/portfolio-iPhone16ProMax.png" width="200"> |
 
 ## 工夫したこと
 
