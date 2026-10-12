@@ -50,11 +50,9 @@ const [talks, setTalks] = useState<string[]>(() => shuffle(initialTalks));
 - props の型（children、state の更新関数など）を調べて定義
 
 **AI**
-- どのメソッドを使えばよいかのヒント
-- スタイルの案（Claude Design の案から選び、自分で写経）
-- コミットメッセージの生成（VS Code）
-- コードのレビュー（Claude Code）
-- 後から追加した機能の設計（Claude Code の /design。実装は自分）
+- Claude Code：どのメソッドを使えばよいかのヒント、コードのレビュー、後から追加した機能の設計（/design。実装は自分）
+- Claude Design：スタイルの案（案から選び、自分で写経）
+- GitHub Copilot：コミットメッセージの生成（VS Code）
 
 ## 使った技術
 

@@ -51,8 +51,8 @@ export const apps: AppType[] = [
       {
         role: 'ai',
         text: [
-          "画像処理のロジック、Skia・AdMobの実装（Claude Code）",
-          "要件の整理と、実装の指示づくり（Claude）",
+          "Claude Code：画像処理のロジック、Skia・AdMobの実装",
+          "Claude：要件の整理と、実装の指示づくり",
         ],
       },
     ],
@@ -103,8 +103,7 @@ export const apps: AppType[] = [
       {
         role: 'ai',
         text: [
-          "Swift版からReact Nativeへの移植の実装（Claude Code）",
-          "移植中に、旧版の丸め処理の不整合を発見（Claude Code）",
+          "Claude Code：Swift版からReact Nativeへの移植の実装、移植中に旧版の丸め処理の不整合を発見",
         ],
       },
     ],
@@ -154,7 +153,7 @@ export const apps: AppType[] = [
       {
         role: 'ai',
         text: [
-          "アプリの実装（Claude Code）",
+          "Claude Code：アプリの実装",
         ],
       },
     ],
@@ -193,7 +192,7 @@ export const apps: AppType[] = [
     coder: 'me',
     roles: [
       {role: 'me', text: ['データ構造とロジックを、AIのヒントをもらいながらコーディング']},
-      {role: 'ai', text: ['画面のスタイル（見た目）をCodexが担当']},
+      {role: 'ai', text: ['Codex：画面のスタイル（見た目）']},
     ],
     release: 'unrelease',
     githubUrl: 'https://github.com/hisakawaserai-svg/CookingApp',
@@ -215,7 +214,7 @@ export const apps: AppType[] = [
     reason: 'AIに就活について相談した際に、ポートフォリオを作っておくべきと言われて作った。',
     roles: [
       { role: 'me', text: ['設計・コーディングを自分で行った'] },
-      { role: 'ai', text: ['わからない点を、AIに何度も質問しながら進めた', 'デザインの案を考えてもらった'] },
+      { role: 'ai', text: ['ChatGPT：わからない点への回答（何度も質問しながら進めた）、デザインの案'] },
     ],
     techs: [
       { name: 'HTML / CSS / JavaScript', usage: ['フレームワークを使わず、1ページ内で画面を切り替えるWebアプリを作成'] },
@@ -265,7 +264,11 @@ export const apps: AppType[] = [
     ],
     roles: [
       {role: 'me', text: ['サイト全体のコーディングを自分で行った。props の型（children、state の更新関数など）は自分で調べて定義した']},
-      {role: 'ai', text: ['どのメソッドを使えばよいかのヒントをもらった。スタイルは Claude Design の案から選び、自分で写経した']},
+      {role: 'ai', text: [
+        'Claude Code：どのメソッドを使えばよいかのヒント、コードのレビュー、終盤に追加した機能の設計（/design。実装は自分）',
+        'Claude Design：スタイルの案（案から選び、自分で写経）',
+        'GitHub Copilot：コミットメッセージの生成（VS Code）',
+      ]},
     ],
     dateInfo: [
       {dateType: 'create', date: '2026-09'}
@@ -290,7 +293,7 @@ export const apps: AppType[] = [
     ],
     roles: [
       { role: 'me', text: ['機能の発案（逆算など）と、画面・計算の設計', 'Swiftの書き方をAIに聞きながら、一部のコードを自分で書いた'] },
-      { role: 'ai', text: ['Swiftの文法や書き方の回答', 'コードの一部の作成'] },
+      { role: 'ai', text: ['ChatGPT：Swiftの文法や書き方の回答、コードの一部の作成'] },
     ],
     dateInfo: [{ dateType: 'create', date: '2025-09' }],
     color: '#C23B30',
